@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Purchase | Batman</title>
+        <!-- Attaching site-wide basic styles -->
+        <link rel="stylesheet" href="css/reset.css">
+        <link rel="stylesheet" href="css/main.css">
+    </head>
+    <body>
+        <!-- Page container for layout -->
+        <div id="container">
+            <header class="masthead">
+                <img class="mainLogo" src="Assets/images/Batman-logo.JPG" alt="Batman Logo">
+                <nav class="nav">
+                   
+                    <ul class="navBar">
+                        <li><a href="index.html" title="Home Page">Home</a></li>
+                        <li><a href="product.html" title="Our Products">Products</a>
+                            <ul class="dropdown">
+                                <li><a href="services.html" title="Services">Services</a></li>
+                            </ul>
+                        </li>
+                        <li class="active"><a href="purchase.html" title="Buy Our Stuff">Purchase</a></li>
+                        <li><a href="about.html" title="Who We Are">About Us</a></li>
+                        <li><a href="contact.html" title="Get in touch">Contact Us</a></li>
+                    </ul>
+                </nav>
+            </header>
+            <main class="main">
+                <h2>Purchase</h2>
+                <p>Our products are now available to you for a limited time only. To complete the order form are required to have the UPC of the product, found on the <a href="product.html">Products page.</a></p>
+                
+                <section>
+                    <form action="processform.php" method="post" class="forms">
+                        <fieldset>
+                            <legend class="legend">Order Form</legend>                       
+                            <!-- Selects for the product of your choice -->
+                            <div>
+                                <label for="productPick">What product would you like:</label>
+                                <select id="productPick">
+                                    <option value="Tech1">Batman</option>
+                                    <option value="Tech2">Robin</option>
+                                    <option value="Tech3">Catwoman</option>
+                                    <option value="Tech4">Joker</option>
+                                    <option value="Tech4">Insurance</option>
+                                </select>
+                            </div>
+                            
+                            <div>
+                                <label for="FirstName">First Name:</label>
+                                <input type="text" id="FirstName" name="FirstName" placeholder="Enter Your First Name" required>
+                            </div>
+                            
+                            <div>
+                                <label for="lastName">Last Name:</label>
+                                <input type="text" id="lastName" name="lastName" placeholder="Enter Your Last Name" required>
+                            </div>
+                            
+                            <div>
+                                <label for="homeAddress">Home Address:</label>
+                                <input type="text" id="homeAddress" name="homeAddress" placeholder="123 Street lane, Barrie, Ontario Canada" required>
+                            </div>
+                                                     
+                            <div>
+                                <label for="specialNotes">Special Notes:</label>
+                                <input type="text" id="specialNotes" name="specialNotes" placeholder="Any Special Instructions?">
+                            </div>
+                            
+                            <!-- Radio button for extended warranty -->
+                            <div>
+                                <label for="Warranty">Would you like to buy the extended Warranty?</label>
+                                <input type="radio" id="Warranty" name="Warranty" value="yes">Yes
+                                <input type="radio" name="Warranty" value="no">No
+                            </div>
+                            
+                            <!-- Checkboxes for TOS/Privacy -->
+                            <div>
+                                <input type="checkbox" name="terms" value="TOS" required>Do you accept our <a href="#">Terms of Service</a>?<br>
+                                <input type="checkbox" name="terms" value="Privacy" required>Do you accept our <a href="#">Privacy Policy</a>?
+                            </div>
+                            
+                            <!-- Submit Button -->
+                            <div>
+                                <input type="submit" name="submitButton">
+                            </div>
+                        </fieldset>
+                    </form>
+                </section>
+            </main>
+            <footer>
+                <h4>&copy; Copyright 2015</h4>
+            </footer>
+        </div><!-- end div#container -->
+    </body>
+</html>
